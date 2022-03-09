@@ -1,2 +1,2 @@
 # swbcnikki.github.io
-About developer me
+About developing developer me
