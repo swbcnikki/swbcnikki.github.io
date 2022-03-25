@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Nyakinyua Kariuki</title>
     <link rel="stylesheet" type="text/css" href="./css/Portfolio.css">
+    <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.jpg">
 </head>
 <!--Body-->
 
@@ -14,9 +15,12 @@
     <!--Navbar-->
     <div class="Navbar">
         <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
         <a href="#About">About</a>
         <a href="#GitHub">GitHub</a>
         <a href="#Contact">Contact</a>
+        <!--Onclick and ondblclick functions added to open and close the contact form -->
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>"
     </div>
     <!--Breaks inserted to add space between navbar and the first
 heading-->
@@ -25,8 +29,7 @@ heading-->
     <!--Background video-->
     <div id="Home">
         <video autoplay muted loop id="backgroundvideo">
-<source src="images/backgroundvideo.mp4"
-type="video/mp4">
+<source src="images/backgroundvideo.mp4" type="video/mp4">
 <!--Display message if video fails to run-->
 Your browser does not support HTML5 video.
 </video>
@@ -48,6 +51,49 @@ website. On it, I will tell you about my background and experience.
 </p>
 </strong>
     </div>
+    <!-- Slideshow -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1 of 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/picture_of_me.jpg" alt="Picture of me">
+                    <div class="text">I'm available to assist you on your project!</div>
+                </div>
+                <!-- Slide 2 of 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpg" alt="HTML, CSS and JS logos">
+                    <div class="text">I am a training full-stack software developer, <br>trained in:<br>HTML, CSS and JavaScript so far</div>
+                </div>
+                <!-- Slide 3 of 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL and Database logo">
+                    <div class="text">I am now training on back end development, databases and SQL!</div>
+                </div>
+                <!-- Slide 4 of 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/and_more_to_come.jpg" alt="Future pursuits">
+                    <div class="text">In the near future will be working on Python, C#, .Net Framework and more!</div>
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                </div>
+                <!-- Previous and next buttons -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- Adds a space between the slideshow images and the dots -->
+
+            <!-- Slideshow dosts (these are another way for users to navigate through the slideshow) -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+    <!-- /Slideshow -->
+
     <!--About section-->
     <div class="Row" id="About">
         <!--Left column-->
@@ -60,7 +106,7 @@ website. On it, I will tell you about my background and experience.
             <p>
                 I am a developing software developer. I am excited to be in this playground.
                 <br>
-                <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech
+                <br>I am a student at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech
 Academy's</a> Software Developer Boot Camp, and so far trained and experienced in HTML and CSS. I created this page.
                 <br>
                 <br>I am on my way to being a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
@@ -92,15 +138,12 @@ Academy's</a> Software Developer Boot Camp, and so far trained and experienced i
         <!--Contact form, right column-->
         <div class="Column_1 Column_tall">
             <h1>Contact</h1>
-            <!--This specifies where and how to send the form
-data; we are leaving it blank-->
+            <!--This specifies where and how to send the form data; we are leaving it blank-->
             <form action="" method="POST">
-                <!-- Here we are
-utilizing a 3rd party service to submit the contact form data, insert
-your formspree endpoint in the action attribute -->
+                <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your 
+                    formspree endpoint in the action attribute -->
                 <label>Name:</label>
-                <input type="text" placeholder="Please enter
-your name here">
+                <input type="text" placeholder="Please enter your name here">
                 <label>Email:</label>
                 <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
                 <label>Message:</label>
@@ -109,6 +152,7 @@ your name here">
             </form>
         </div>
     </div>
+
     <!--Footer section-->
     <footer>
         <p>
@@ -116,6 +160,7 @@ your name here">
             <br>
         </p>
     </footer>
+    <!--/Footer section-->
 </body>
 
 </html>
