@@ -754,7 +754,23 @@ footer {
 }
 
 
-/*Form styling */
+/*styling for the contact form */
+
+.form-popup {
+    z-index: 8;
+    /* This z-index ensures the contact form shows above all other elements on the page */
+    display: none;
+    /* Set the display to none, we will use Javascript to show the contact form */
+    position: fixed;
+    /* The form stays in the same location no matter what */
+    bottom: .5vw;
+    /* slightly up from the bottom of the viewport */
+    right: .5vw;
+    /* slightly in from the right side of the viewport */
+}
+
+
+/* Form styling */
 
 .form-container {
     max-width: 49vw;
@@ -809,9 +825,9 @@ button {
 
 button:hover,
 .form-container .btn:hover {
-    color: white;
+    color: rgb(75, 29, 88);
     /* This makes the text in the buttons white when hovered over */
-    background-color: rgb(75, 29, 88);
+    background-color: white;
     /* The background of the button changes to purple when hovered over */
     transition-duration: 1s;
     /* This makes the transition last 1 second */
