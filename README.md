@@ -1,2 +1,3 @@
 # swbcnikki.github.io
-About developing developer me
+Portfolio that conveys my experience so far as a software developer.
+Updated Html with Formspree real link
